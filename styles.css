@@ -1,0 +1,272 @@
+/* O caos continua e se intensifica aqui */
+body {
+    background-image: url('https://i.gifer.com/origin/9e/9e81b0a80ef02f69b9d36a7c66172c3d_w200.gif');
+    background-repeat: repeat;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    color: #00FF00; /* Verde limão */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Para a marquee não criar scroll horizontal */
+    cursor: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Cursor-finger.png'), auto; /* Cursor de dedo irritante */
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    background-color: rgba(255, 0, 255, 0.7); /* Fúcsia transparente */
+    border: 10px dashed yellow;
+    padding: 20px;
+    box-shadow: 0 0 50px 20px rgba(0, 255, 255, 0.8); /* Sombra neon */
+}
+
+.marquee-gigante {
+    font-size: 60px;
+    font-weight: bold;
+    color: #FFFF00; /* Amarelo */
+    background-color: #0000FF; /* Azul */
+    padding: 10px;
+    font-family: 'Impact', fantasy;
+    text-shadow: 5px 5px 0px #FF00FF; /* Sombra roxa chamativa */
+}
+
+/* Animação para piscar o texto */
+.blink {
+    animation: piscar 0.5s linear infinite;
+    font-size: 70px;
+    color: red;
+    text-shadow: 3px 3px 5px black;
+}
+
+@keyframes piscar {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.paragrafo-zoado {
+    font-size: 24px;
+    color: cyan;
+}
+
+.fonte-papyrus {
+    font-family: 'Papyrus', fantasy;
+    font-size: 20px;
+    color: orange;
+}
+
+ul {
+    list-style-type: url('https://www.w3.org/2008/site/images/favicon.ico'); /* Ícone aleatório como bullet */
+    color: white;
+    font-size: 22px;
+}
+
+.gifs-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.gifs-container img { /* Ajuste para não ter borda em todos os gifs */
+    margin: 10px;
+    border: none; /* removemos a borda para os gifs para diferenciar */
+}
+
+
+.img-distorcida {
+    width: 500px;
+    height: 150px;
+    object-fit: fill;
+    border: 5px solid red; /* A borda volta para essa imagem específica */
+}
+
+/* Estilos para a nova galeria de fotos */
+.galeria-igor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border: 8px double limegreen;
+}
+
+.foto-item {
+    background-color: #FF69B4; /* Rosa choque */
+    padding: 15px;
+    border: 5px ridge #00FFFF; /* Ciano */
+    text-align: center;
+    box-shadow: 10px 10px 0px 0px #FFD700; /* Sombra amarela */
+    transform: rotate(calc(var(--rot) * 1deg)); /* Rotação aleatória via JS */
+    transition: transform 0.2s ease-in-out;
+}
+
+.foto-item:hover {
+    transform: scale(1.1) rotate(0deg); /* Zoom e endireita ao passar o mouse */
+    z-index: 10;
+}
+
+.foto-item img {
+    max-width: 100%;
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Recorta a imagem para preencher o espaço */
+    border: 3px solid white;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+}
+
+.foto-item p {
+    font-size: 18px;
+    color: #333333; /* Texto escuro no fundo claro */
+    font-family: 'Georgia', serif;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Nova seção Bluezão */
+.secao-bluezao {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #4B0082; /* Azul índigo bem forte */
+    border: 15px solid gold;
+    text-align: center;
+    box-shadow: 0 0 70px 30px #00FFFF; /* Sombra ciano gigante */
+    position: relative;
+    z-index: 1; /* Para garantir que as bordas da sombra sejam visíveis */
+}
+
+.secao-bluezao::before { /* Efeito de borda dupla piscando */
+    content: '';
+    position: absolute;
+    top: -5px; bottom: -5px; left: -5px; right: -5px;
+    border: 5px dotted red;
+    animation: piscar-borda 1s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes piscar-borda {
+    0% { border-color: red; }
+    50% { border-color: yellow; }
+    100% { border-color: lime; }
+}
+
+
+.img-bluezao {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Imagem redonda */
+    border: 10px groove #00FF00; /* Borda verde neon */
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 0 30px 10px white; /* Sombra branca */
+    animation: girar-bluezao 5s infinite linear; /* Imagem girando */
+}
+
+@keyframes girar-bluezao {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.texto-bluezao {
+    font-family: 'Impact', fantasy;
+    font-size: 30px;
+    color: #FFD700; /* Ouro */
+    text-shadow: 3px 3px 0px black, -3px -3px 0px red; /* Sombra dupla */
+    margin-bottom: 30px;
+}
+
+#botao-homenagem {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    background-color: #8B0000; /* Vermelho escuro */
+    padding: 25px;
+    border: 12px double #00FFFF; /* Ciano */
+    cursor: url('https://icons.iconarchive.com/icons/wikipedia/wikipedia/256/Bluezao-icon.png'), pointer; /* Ícone de cursor do Bluezão (se encontrar um!) */
+    width: 80%;
+    margin: 0 auto;
+    animation: pulsar-bluezao 0.7s infinite alternate;
+}
+
+@keyframes pulsar-bluezao {
+    0% { transform: scale(1); background-color: #8B0000;}
+    100% { transform: scale(1.08); background-color: #FF0000; } /* Pulsa e muda de cor */
+}
+
+
+textarea {
+    width: 100%;
+    height: 100px;
+    background-color: yellow;
+    color: purple;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    border: 5px groove green;
+}
+
+#botao-chato, #botao-secreto {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    background-color: orange;
+    padding: 20px;
+    border: 10px outset red;
+    cursor: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Cursor-finger.png'), pointer; /* Cursor de dedo irritante */
+    margin-top: 20px;
+    width: 100%;
+    display: block; /* Para ficarem um abaixo do outro */
+    
+    animation: pulsar 1s infinite;
+}
+
+#botao-secreto {
+    background-color: darkred;
+    color: white;
+    border: 10px dotted black;
+    animation: piscar-fundo 0.8s infinite alternate; /* Animação de fundo para o botão secreto */
+    margin-top: 10px;
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); } /* Diminuí um pouco o pulso pra não cansar tanto */
+    100% { transform: scale(1); }
+}
+
+@keyframes piscar-fundo {
+    0% { background-color: darkred; }
+    100% { background-color: #FF00FF; } /* Pisca para roxo */
+}
+
+.pisca-texto {
+    animation: piscar-cor 1s infinite alternate;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Arial Black', sans-serif;
+    text-shadow: 2px 2px 0px #FF00FF, -2px -2px 0px #00FFFF; /* Sombra dupla */
+}
+
+@keyframes piscar-cor {
+    0% { color: yellow; }
+    50% { color: cyan; }
+    100% { color: magenta; }
+}
+
+.escondido {
+    display: none;
+}
+
+#resultado-secreto {
+    margin-top: 30px;
+    background-color: #333333;
+    color: white;
+    padding: 20px;
+    border: 7px solid gold;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 0 30px 10px gold;
+}
+
+#resultado-secreto img {
+    max-width: 80%;
+    margin-top: 20px;
+    border: 5px double white;
+}
